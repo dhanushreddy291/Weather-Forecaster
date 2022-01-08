@@ -1,10 +1,5 @@
 import * as React from "react";
 import "./styles/weather.css";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
 
 export default function weather({ weatherData }) {
   const date = new Date(weatherData.location.localtime);

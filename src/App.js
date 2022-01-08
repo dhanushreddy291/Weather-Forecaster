@@ -32,9 +32,9 @@ function App() {
     <div className="App">
       <Navbar />
       {typeof data.location != "undefined" ? (
-        <>
+        <div className="weather-box">
           <Weather weatherData={data} />
-        </>
+        </div>
       ) : (
         <div></div>
       )}

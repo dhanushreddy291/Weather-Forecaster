@@ -1,18 +1,25 @@
+body {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .box {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
-  padding-top: 150px;
-  width: 80%;
+  /* padding-top: 150px; */
+  width: 90%;
 }
 
 .temperature h1 {
+  color: #f7f4ea;
   font-size: 14vw;
 }
 
 .temperature {
-  flex-grow: 1;
+  /* flex-grow: 2; */
   padding-left: 5%;
 }
 
@@ -20,9 +27,9 @@
   font-size: 4vw;
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-around;
-  flex-grow: 2;
-  align-items: flex-start;
+  /* flex-grow: 1.5; */
+  align-items: center;
+  color: #f7f4ea;
 }
 
 .time-details {
@@ -34,6 +41,9 @@
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  justify-content: space-around;
-  flex-grow: 2;
+  color: #f7f4ea;
+}
+
+.icons img {
+  height: 5vw;
 }

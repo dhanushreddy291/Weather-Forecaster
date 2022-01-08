@@ -1,5 +1,8 @@
 .App {
   /* text-align: center; */
+  width: 100vw;
+  height: 100vh;
+  background-color: #6a7ff5;
 }
 
 * {
@@ -39,4 +42,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.weather-box {
+  margin: auto;
+  width: 60%;
+  border: 2.3vw inset #574b9b;
+  padding: 10px;
+  margin-top: 12.5vh;
+  margin-bottom: 12.5vh;
+  /* background-image: url("https://wallpaperaccess.com/full/1379508.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
 }

@@ -1,0 +1,39 @@
+.box {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 150px;
+  width: 80%;
+}
+
+.temperature h1 {
+  font-size: 14vw;
+}
+
+.temperature {
+  flex-grow: 1;
+  padding-left: 5%;
+}
+
+.city {
+  font-size: 4vw;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  flex-grow: 2;
+  align-items: flex-start;
+}
+
+.time-details {
+  font-size: 1.26vw;
+}
+
+.icons {
+  font-size: 1.9vw;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-around;
+  flex-grow: 2;
+}

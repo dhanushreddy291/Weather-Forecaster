@@ -1,51 +1,37 @@
-import * as React from "react";
+import React from "react";
 import "./styles/weather.css";
+import { FormattedDate, FormattedTime } from ".";
+import {
+  MDBTypography,
+  MDBCard,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCardBody,
+  MDBCardHeader,
+} from "mdb-react-ui-kit";
 
 export default function weather({ weatherData }) {
-  const date = new Date(weatherData.location.localtime);
-  const days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  const month = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  const FormattedDate = `${
-    date.getHours() >= 12 ? date.getHours() - 12 : date.getHours()
-  }:${date.getMinutes()} ${date.getHours() >= 12 ? "PM" : "AM"} - ${
-    days[date.getDay()]
-  }, ${date.getDate()} ${month[date.getMonth()]} '${date.getYear() - 100}`;
   return (
     <div className="box">
-      <div className="temperature">
-        <h1>{weatherData.current.temp_c}°</h1>
-      </div>
-      <div className="city">
-        <div>{weatherData.location.name}</div>
-        <div className="time-details">{FormattedDate}</div>
-      </div>
-      <div className="icons">
-        <div>
-          <img src={weatherData.current.condition.icon} alt="weather-icon" />
-        </div>
-        <div>{weatherData.current.condition.text}</div>
-      </div>
+      <MDBCard
+        className="mb-3 text-center"
+        background="white"
+        style={{ maxWidth: "18rem" }}
+      >
+        <MDBCardHeader>
+          <MDBTypography variant="h2" className="city">
+            {weatherData.location.name}
+          </MDBTypography>
+          <div className="temperature">{weatherData.current.temp_c}°</div>
+          <FormattedDate date={new Date(weatherData.location.localtime)} />
+        </MDBCardHeader>
+        <MDBCardBody>
+          <MDBCardTitle>{weatherData.current.condition.text}</MDBCardTitle>
+          <MDBCardText>
+            <FormattedTime date={new Date(weatherData.location.localtime)} />
+          </MDBCardText>
+        </MDBCardBody>
+      </MDBCard>
     </div>
   );
 }

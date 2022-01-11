@@ -1,7 +1,6 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import Weather from "./components/weather";
-import Navbar from "./components/navbar";
+import { Weather, Navbar } from "./components";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 
@@ -35,7 +34,14 @@ function App() {
           <Weather weatherData={data} />
         </div>
       ) : (
-        <div></div>
+        <lottie-player
+          src="https://assets9.lottiefiles.com/packages/lf20_cgxasnue.json"
+          background="transparent"
+          speed="1"
+          style={{ width: "300px", height: "300px" }}
+          loop
+          autoplay
+        ></lottie-player>
       )}
     </div>
   );

@@ -1,7 +1,7 @@
 .App {
   width: 100vw;
   height: 100vh;
-  background-color: #2a9d8f;
+  background-color: #000000;
 }
 
 * {
@@ -41,4 +41,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+lottie-player {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }

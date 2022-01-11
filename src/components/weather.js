@@ -14,9 +14,10 @@ export default function weather({ weatherData }) {
   return (
     <div className="box">
       <MDBCard
-        className="mb-3 text-center"
+        className="mb-3 text-center text-dark"
         background="white"
-        style={{ maxWidth: "18rem" }}
+        style={{ width: "26%", minWidth: "350px" }}
+        border="primary"
       >
         <MDBCardHeader>
           <MDBTypography variant="h2" className="city">

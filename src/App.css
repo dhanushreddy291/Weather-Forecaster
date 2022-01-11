@@ -1,7 +1,7 @@
 .App {
   width: 100vw;
   height: 100vh;
-  background-color: #000000;
+  background-color: rgb(0, 0, 0);
 }
 
 * {
@@ -44,8 +44,7 @@
 }
 
 lottie-player {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 25vh;
 }

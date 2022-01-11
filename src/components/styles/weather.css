@@ -3,7 +3,7 @@
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
-  margin-top: 12.5%;
+  margin-top: 25vh;
 }
 
 .temperature {

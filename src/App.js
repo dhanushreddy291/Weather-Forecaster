@@ -17,7 +17,7 @@ function App() {
 
       if (lat != "" && long != "") {
         let response = await axios.get(
-          `https://api.weatherapi.com/v1/forecast.json?q=${lat},${long}&aqi=yes&key=6d2b76bc690d467ca3881147220501`
+          `https://api.weatherapi.com/v1/forecast.json?q=${lat},${long}&aqi=yes&key=${process.env.REACT_APP_API_KEY}`
         );
 
         setData(response.data);

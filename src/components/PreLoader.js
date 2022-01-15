@@ -12,6 +12,7 @@ export default function PreLoader() {
     "lf20_RGolH6",
     "lf20_odwhwstq",
     "lf20_ccpdxyfc",
+    "lf20_cgxasnue",
   ];
   return (
     <lottie-player

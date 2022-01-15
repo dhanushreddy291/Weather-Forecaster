@@ -13,6 +13,13 @@ export default function PreLoader() {
     "lf20_odwhwstq",
     "lf20_ccpdxyfc",
     "lf20_cgxasnue",
+    "lf20_q7uarxsb",
+    "lf20_wvwimamz",
+    "lf20_kk62um5v",
+    "lf20_lyw2wdhp",
+    "lf20_mlf754me",
+    "lf20_tndxgun7",
+    "lf20_zwijnhaz",
   ];
   return (
     <lottie-player

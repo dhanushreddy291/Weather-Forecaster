@@ -1,18 +1,19 @@
 .box {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   align-items: center;
   justify-content: space-around;
-  margin-top: 25vh;
+  margin-top: 12.5vh;
 }
 
 .temperature {
-  font-size: calc(75px + 1.5vw);
+  font-size: calc(75px + 4vw);
   font-weight: 800;
+  color: #000;
 }
 
 .city {
   padding-top: 7%;
   padding-bottom: 0%;
-  font-size: calc(20px + 0.5vw);
+  font-size: calc(19px + 0.5vw);
 }

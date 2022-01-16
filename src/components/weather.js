@@ -12,15 +12,14 @@ import {
 
 export default function weather({ weatherData }) {
   return (
-    <div className="box">
+    <div>
       <MDBCard
         className="mb-3 text-center text-dark"
-        background="white"
-        style={{ width: "26%", minWidth: "350px" }}
-        border="primary"
+        style={{ minWidth: "400px", backgroundColor: "#FAEEE0" }}
+        border="dark"
       >
         <MDBCardHeader>
-          <MDBTypography variant="h2" className="city">
+          <MDBTypography className="city">
             {weatherData.location.name}
           </MDBTypography>
           <div className="temperature">{weatherData.current.temp_c}°</div>

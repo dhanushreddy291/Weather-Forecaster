@@ -7,13 +7,15 @@
 }
 
 .temperature {
-  font-size: calc(75px + 4vw);
+  font-size: min(max(8vw, 100px), 150px);
   font-weight: 800;
   color: #000;
+  text-shadow: 3px 3px 0.1px #ffffff;
 }
 
 .city {
-  padding-top: 7%;
-  padding-bottom: 0%;
-  font-size: calc(19px + 0.5vw);
+  padding-top: 5%;
+  font-size: min(max(2vw, 25px), 30px);
+  text-shadow: 1.2px 1.8px 0.1px #ffffff;
+  font-weight: 800;
 }

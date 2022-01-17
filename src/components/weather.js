@@ -11,23 +11,65 @@ import {
 } from "mdb-react-ui-kit";
 
 export default function weather({ weatherData }) {
+  const Color = "#FFBC97";
+  const BottomColor = "#F7F7F7";
   return (
     <div>
       <MDBCard
         className="mb-3 text-center text-dark"
-        style={{ minWidth: "400px", backgroundColor: "#FAEEE0" }}
+        style={{
+          minWidth: "min(600px, 90vw)",
+          backgroundColor: "#FAEEE0",
+        }}
         border="dark"
       >
-        <MDBCardHeader>
-          <MDBTypography className="city">
+        <MDBCardHeader
+          style={{
+            backgroundColor: Color,
+          }}
+        >
+          <MDBTypography
+            className="city"
+            style={{
+              backgroundColor: Color,
+            }}
+          >
             {weatherData.location.name}
           </MDBTypography>
-          <div className="temperature">{weatherData.current.temp_c}°</div>
-          <FormattedDate date={new Date(weatherData.location.localtime)} />
+          <div
+            className="temperature"
+            style={{
+              backgroundColor: Color,
+            }}
+          >
+            {weatherData.current.temp_c}°
+          </div>
+          <MDBTypography
+            style={{
+              backgroundColor: Color,
+              fontSize: "min(max(1.4vw, 15px), 30px)",
+            }}
+          >
+            <FormattedDate date={new Date(weatherData.location.localtime)} />
+          </MDBTypography>
         </MDBCardHeader>
-        <MDBCardBody>
-          <MDBCardTitle>{weatherData.current.condition.text}</MDBCardTitle>
-          <MDBCardText>
+        <MDBCardBody
+          style={{
+            backgroundColor: BottomColor,
+          }}
+        >
+          <MDBCardTitle
+            style={{
+              backgroundColor: BottomColor,
+            }}
+          >
+            {weatherData.current.condition.text}
+          </MDBCardTitle>
+          <MDBCardText
+            style={{
+              backgroundColor: BottomColor,
+            }}
+          >
             <FormattedTime date={new Date(weatherData.location.localtime)} />
           </MDBCardText>
         </MDBCardBody>

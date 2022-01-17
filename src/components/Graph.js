@@ -5,28 +5,19 @@ import {
   LinearScale,
   PointElement,
   LineElement,
-  Title,
-  Tooltip,
-  Legend,
-  Filler,
+  // Title,
+  // Tooltip,
+  // Legend,
+  // Filler,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-  Filler
-);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement);
 
 export default function graph({ Data }) {
   const NewData = [];
   for (var i = 0; i < Data.forecast.forecastday[0].hour.length; i++) {
-    NewData.push(Data.forecast.forecastday[0].hour[i].temp_c);
+    NewData.push(Data.forecast.forecastday[0].hour[i].feelslike_c);
   }
   const data = {
     labels: [
@@ -58,20 +49,67 @@ export default function graph({ Data }) {
     datasets: [
       {
         data: NewData,
-        label: `Forecast for ${Data.location.name}`,
+        label: `Weather Forecast for ${Data.location.name} Today`,
         fill: true,
-        backgroundColor: "#6D9886",
-        borderColor: "#fff",
+        backgroundColor: "rgba(81, 107, 235, 0.61)",
+        borderColor: "rgb(0, 0, 0, 1)",
       },
     ],
   };
   return (
-    <div>
+    <div
+      style={{
+        width: "min(92vw, 650px)",
+        marginTop: "25px",
+      }}
+    >
       <Line
         data={data}
-        options={{ responsive: true, maintainAspectRation: true }}
-        width={"440vw"}
-        height={"250vh"}
+        options={{
+          responsive: true,
+          maintainAspectRation: true,
+          scales: {
+            x: {
+              grid: {
+                color: "rgba(135, 100, 69, 0.1)",
+                borderColor: "#000",
+              },
+            },
+            y: {
+              grid: {
+                color: "rgba(135, 100, 69, 0.1)",
+                borderColor: "#000",
+              },
+              ticks: {
+                callback: function (value) {
+                  return value + "°C";
+                },
+              },
+            },
+          },
+          plugins: {
+            legend: {
+              labels: {
+                font: {
+                  weight: "bolder",
+                  size: 20,
+                  family: "Comfortaa",
+                  lineHeight: 1.4,
+                },
+              },
+            },
+          },
+          animations: {
+            tension: {
+              duration: 500,
+              easing: "easeInOutElastic",
+              from: 1,
+              to: 0,
+              loop: false,
+            },
+          },
+        }}
+        height={"150vh"}
       />
     </div>
   );

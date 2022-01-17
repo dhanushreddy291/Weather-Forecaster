@@ -1,11 +1,11 @@
 .App {
   width: 100vw;
   min-height: 100vh;
-  background-color: #f9cf93;
 }
 
 * {
   font-family: "Comfortaa", cursive;
+  background-color: #f9cf93;
 }
 
 .App-logo {

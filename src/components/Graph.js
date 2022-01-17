@@ -101,7 +101,7 @@ export default function graph({ Data }) {
               labels: {
                 font: {
                   weight: "bolder",
-                  size: 20,
+                  size: 12,
                   family: "Comfortaa",
                   lineHeight: 1.4,
                 },

@@ -50,7 +50,9 @@ export default function weather({ weatherData }) {
               fontSize: "min(max(1.4vw, 15px), 30px)",
             }}
           >
-            <FormattedDate date={new Date(weatherData.location.localtime)} />
+            <FormattedDate
+              date={new Date(weatherData.location.localtime.replace(/-/g, "/"))}
+            />
           </MDBTypography>
         </MDBCardHeader>
         <MDBCardBody
@@ -70,7 +72,9 @@ export default function weather({ weatherData }) {
               backgroundColor: BottomColor,
             }}
           >
-            <FormattedTime date={new Date(weatherData.location.localtime)} />
+            <FormattedTime
+              date={new Date(weatherData.location.localtime.replace(/-/g, "/"))}
+            />
           </MDBCardText>
         </MDBCardBody>
       </MDBCard>

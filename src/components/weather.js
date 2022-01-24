@@ -10,9 +10,7 @@ import {
   MDBCardHeader,
 } from "mdb-react-ui-kit";
 
-export default function weather({ weatherData }) {
-  const Color = "#FFBC97";
-  const BottomColor = "#F7F7F7";
+export default function weather({ weatherData, TopColor, BottomColor }) {
   return (
     <div>
       <MDBCard
@@ -25,13 +23,13 @@ export default function weather({ weatherData }) {
       >
         <MDBCardHeader
           style={{
-            backgroundColor: Color,
+            backgroundColor: TopColor,
           }}
         >
           <MDBTypography
             className="city"
             style={{
-              backgroundColor: Color,
+              backgroundColor: TopColor,
             }}
           >
             {weatherData.location.name}
@@ -39,15 +37,15 @@ export default function weather({ weatherData }) {
           <div
             className="temperature"
             style={{
-              backgroundColor: Color,
+              backgroundColor: TopColor,
             }}
           >
             {weatherData.current.temp_c}°
           </div>
           <MDBTypography
             style={{
-              backgroundColor: Color,
-              fontSize: "min(max(1.4vw, 15px), 30px)",
+              backgroundColor: TopColor,
+              fontSize: "min(max(1.4vw, 21px), 30px)",
             }}
           >
             <FormattedDate

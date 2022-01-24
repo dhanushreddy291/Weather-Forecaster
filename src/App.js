@@ -27,18 +27,18 @@ function App() {
             );
             setData(response.data);
             setLoading(false);
-            console.log(response.data);
+            // console.log(response.data);
           }
         }
       } else {
-        console.log("city = " + city);
+        // console.log("city = " + city);
         setLoading(true);
         let response = await axios.get(
           `https://api.weatherapi.com/v1/forecast.json?q=${city}&aqi=yes&key=${process.env.REACT_APP_API_KEY}`
         );
         setData(response.data);
         setLoading(false);
-        console.log(response.data);
+        // console.log(response.data);
       }
     };
     fetchData();

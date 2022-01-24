@@ -16,6 +16,7 @@
 .city {
   padding-top: 5%;
   font-size: min(max(2vw, 25px), 30px);
-  text-shadow: 1.2px 1.8px 0.1px #ffffff;
-  font-weight: 800;
+  text-shadow: 1px 1px 0.3px #ffffff;
+  font-weight: 600;
+  font-style: italic;
 }

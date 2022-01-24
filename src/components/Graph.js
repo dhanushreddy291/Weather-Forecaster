@@ -23,7 +23,7 @@ ChartJS.register(
   Filler
 );
 
-export default function graph({ Data }) {
+export default function graph({ Data, TopColor }) {
   const NewData = [];
   for (var i = 0; i < Data.forecast.forecastday[0].hour.length; i++) {
     NewData.push(Data.forecast.forecastday[0].hour[i].feelslike_c);
@@ -60,8 +60,8 @@ export default function graph({ Data }) {
         data: NewData,
         label: `Weather Forecast for ${Data.location.name} Today`,
         fill: true,
-        backgroundColor: "rgba(81, 107, 235, 0.61)",
-        borderColor: "rgb(0, 0, 0, 1)",
+        backgroundColor: TopColor,
+        borderColor: "rgb(255, 255, 255, 1)",
       },
     ],
   };
@@ -101,8 +101,8 @@ export default function graph({ Data }) {
               labels: {
                 font: {
                   weight: "bolder",
-                  size: 12,
-                  family: "Comfortaa",
+                  size: 17,
+                  family: "Asap Condensed, sans-serif",
                   lineHeight: 1.4,
                 },
               },

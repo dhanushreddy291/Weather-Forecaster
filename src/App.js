@@ -11,13 +11,13 @@ function App() {
   const [city, setCity] = useState(null);
   const [data, setData] = useState([]);
 
-  navigator.geolocation.getCurrentPosition(function (position) {
-    setLat(position.coords.latitude.toFixed(4));
-    setLong(position.coords.longitude.toFixed(4));
-  });
-
   useEffect(() => {
     const fetchData = async () => {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        setLat(position.coords.latitude.toFixed(4));
+        setLong(position.coords.longitude.toFixed(4));
+      });
+
       if (city === null || city.length <= 3) {
         if (lat != "" && long != "") {
           if (typeof data.location == "undefined") {

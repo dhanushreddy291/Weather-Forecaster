@@ -68,3 +68,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdhanushreddy291%2Fnew_weather_app&env=REACT_APP_API_KEY&envDescription=API%20Key%20for%20getting%20the%20Weather%20Data&envLink=https%3A%2F%2Fwww.weatherapi.com%2F&project-name=weather&repo-name=weather)

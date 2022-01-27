@@ -1,72 +1,32 @@
-# Getting Started with Create React App
+# Weather Forecaster
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple Weather App built using React, GraphsJS and Bootstrap, using WeatherAPI.com to provide the Weather forecast for any city
 
-## Available Scripts
+# Inspiration
 
-In the project directory, you can run:
+I wanted to learn React the hard way. By hard way, I mean getting my feet dirty and building apps using React. Whats a better learning path than practically trying things, failing in the process, fixing the bugs and finally making it live.
 
-### `npm start`
+# APIs
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Weather data is retrieved from http://weatherapi.com/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Some errors observed in the Weather API Data
 
-### `npm test`
+- The data being fed to the graph is not that accurate. Since I am using free API source for the weather Data, I cannot complain much. It's just about upgrading to a paid data provider like Yahoo Weather or AccuWeather to get a fully relaible feed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Running
 
-### `npm run build`
+## API keys
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Get your API key from http://weatherapi.com/ and store it in a variable named REACT_APP_API_KEY in your env file.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Clone & install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Clone this repo `git clone https://github.com/dhanushreddy291/new_weather_app.git`
+- `cd new_weather_app`
+- run `npm install`
+- run `npm run start` for a local server
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Direct Deploy to Vercel with the below Button
 
 # [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdhanushreddy291%2Fnew_weather_app&env=REACT_APP_API_KEY&envDescription=API%20Key%20for%20getting%20the%20Weather%20Data&envLink=https%3A%2F%2Fwww.weatherapi.com%2F&project-name=weather&repo-name=weather)
